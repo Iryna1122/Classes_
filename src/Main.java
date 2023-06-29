@@ -10,15 +10,17 @@ public class Main {
 //        City city=new City();
 //        city.enterData();
 //        city.displayData();
-        Fraction fraction1 = new Fraction();
-        Fraction fraction2 = new Fraction();
 
 
-        fraction1.enterData();
-        fraction2.enterData();
-
-         fraction1.add(fraction2);
-        fraction1.displayData();
+//        Fraction fraction1 = new Fraction();
+//        Fraction fraction2 = new Fraction();
+//
+//
+//        fraction1.enterData();
+//        fraction2.enterData();
+//
+//         fraction1.add(fraction2);
+//        fraction1.displayData();
     }
 
     public static  class Person
@@ -60,6 +62,33 @@ public class Main {
             System.out.println("City: " + city);
             System.out.println("Country: " + country);
             System.out.println("Home Address: " + homeAddress);
+        }
+
+        //added
+        public String getFullNameUpperCase() {
+            return fullName.toUpperCase();
+        }
+        public Person(String fullName, String dateOfBirth, String phoneNumber, String city, String country, String homeAddress) {
+            this.fullName = fullName;
+            this.dateOfBirth = dateOfBirth;
+            this.phoneNumber = phoneNumber;
+            this.city = city;
+            this.country = country;
+            this.homeAddress = homeAddress;
+        }
+
+        public void displayData(String format) {
+            if (format.equals("short")) {
+                System.out.println("Full Name: " + fullName);
+                System.out.println("Phone Number: " + phoneNumber);
+            } else if (format.equals("full")) {
+                System.out.println("Full Name: " + fullName);
+                System.out.println("Date of Birth: " + dateOfBirth);
+                System.out.println("Phone Number: " + phoneNumber);
+                System.out.println("City: " + city);
+                System.out.println("Country: " + country);
+                System.out.println("Home Address: " + homeAddress);
+            }
         }
 
         public String getFullName()
@@ -130,6 +159,18 @@ public class Main {
             System.out.println("Count of persons: "+ countPersons);
             System.out.println("Post Index: "+ index);
             System.out.println("Phone Code: "+ telCode);
+        }
+
+        @Override
+        public String toString() {
+            return "City{" +
+                    "title='" + title + '\'' +
+                    ", region='" + region + '\'' +
+                    ", country='" + country + '\'' +
+                    ", countPersons=" + countPersons +
+                    ", index=" + index +
+                    ", telCode=" + telCode +
+                    '}';
         }
 
         public String getTitle()
