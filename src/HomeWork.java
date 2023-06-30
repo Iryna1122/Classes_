@@ -121,7 +121,7 @@ public class HomeWork {
              System.out.println("Enter Title: ");
              title=scanner.nextLine();
 
-             System.out.println("Enter manufactore: ");
+             System.out.println("Enter manufacture: ");
              manufacture=scanner.nextLine();
 
              System.out.println("Enter year: ");
